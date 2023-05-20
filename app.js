@@ -41,7 +41,14 @@ t1.add({
 	targets: '.letter',
 	translateY: [-1000, 0],
 	delay: anime.stagger(10, {easing: 'steps'}),
-}, '-=100')
+}, '-=100').add({
+	targets: '.btn',
+	translateX: [-1000,0],
+	duration: 1500,
+}).add({
+	targets: '.lower-more',
+	translateX: [1000,0]
+}, '-=1500')
 
 
 const drop_down = document.querySelectorAll('.drop-down');

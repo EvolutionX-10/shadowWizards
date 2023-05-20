@@ -116,6 +116,63 @@ nav {
 	display: flex;
 }
 
+.hamburger {
+	width: 20px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 20px;
+	cursor: pointer;
+}
+
+.hamburger>span {
+	width: 20px;
+	background: var(--btn-color);
+	height: 2px;
+}
+
+span {
+	transition: transform .5s cubic-bezier(.71, .44, .13, .83), background 1s cubic-bezier(.71, .44, .13, .83);
+}
+
+.opened>.top {
+	transform: translate(-10%, 250%) rotate(45deg);
+}
+
+.opened>.mid {
+	background: transparent;
+}
+
+.opened>.bot {
+	transform: translate(-10%, -300%) rotate(135deg);
+}
+
+.mnavbar {
+	width: 100vw;
+	position: absolute;
+	height: 95vh;
+	left: 0;
+	top: 100%;
+	z-index: 5000;
+	display: flex;
+	flex-direction: column;
+	backdrop-filter: blur(10px);
+
+	/* background: rgba(5, 0, 25, 0.596); */
+	align-items: center;
+	animation: pop 1s cubic-bezier(0, .54, 0, 1);
+}
+
+.mnavbar_text {
+	color: white !important;
+	padding: 30px;
+	text-transform: uppercase;
+}
+
+
+/* !------------------------------------------------ */
+
+
 .center-text {
 	color: white;
 	width: 30rem;
@@ -394,6 +451,18 @@ footer {
 	font-size: xx-large;
 }
 
+@keyframes pop {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
 @media (max-width: 40rem) {
 	.center-text {
 		width: 80%;
@@ -430,6 +499,10 @@ footer {
 
 	nav {
 		justify-content: space-around;
+	}
+
+	.hamburger {
+		display: flex;
 	}
 
 	#f1, #f2 {
