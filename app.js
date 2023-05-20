@@ -40,7 +40,7 @@ text.forEach((letter) => {
 t1.add({
 	targets: '.letter',
 	translateY: [-1000, 0],
-	delay: anime.stagger(10, {easing: 'steps'}),
+	delay: anime.stagger(50, {easing: 'steps'}),
 }, '-=100').add({
 	targets: '.btn',
 	translateX: [-1000,0],
