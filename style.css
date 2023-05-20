@@ -451,6 +451,21 @@ footer {
 	font-size: xx-large;
 }
 
+
+
+.copywright {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	padding: 2rem;
+	background: rgba(4, 4, 4, 0.497)
+}
+
+.copywright>div {
+	width: 70%;
+}
+
 @keyframes pop {
 	from {
 		transform: translateY(100%);
