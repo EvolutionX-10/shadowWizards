@@ -220,6 +220,7 @@ span {
 .lower-text {
 	width: 60%;
 	display: flex;
+	overflow: hidden;
 	justify-content: space-around;
 }
 

@@ -39,16 +39,18 @@ text.forEach((letter) => {
 
 t1.add({
 	targets: '.letter',
-	translateY: [-1000, 0],
-	delay: anime.stagger(50, {easing: 'steps'}),
-}, '-=100').add({
+	translateY: [-100, 0],
+	delay: anime.stagger(10),
+}, '-=300').add({
 	targets: '.btn',
 	translateX: [-1000,0],
 	duration: 1500,
+	delay: 500,
 }).add({
 	targets: '.lower-more',
-	translateX: [1000,0]
-}, '-=1500')
+	translateX: [1000,0],
+	duration: 1500,
+}, '-=2500')
 
 
 const drop_down = document.querySelectorAll('.drop-down');
